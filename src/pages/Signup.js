@@ -9,24 +9,30 @@ const Signup = (props) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const URL = "localhost:3000/users"
+    const URL = "http://localhost:3000/users"
 
 const handleSubmit = (password, username) => {
 
-    console.log(URL)
+const data = {
+    user: {
+        username: username,
+        password: password 
+    }
+}
 
     fetch(URL, {
         method: "post",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({username, password}),
+        body: JSON.stringify(data),
     })
-        .then((res) => {
-            alert("User is created")
-            props.history.push("/login");
+        .then(res => res.json())
+        .then(json => {
+            // "token" storing token - can call it anything
+            localStorage.setItem("token", json.jwt_token)
         })
-        }
+    }
     
     return (
         <div>

@@ -6,6 +6,7 @@ import './App.css';
 // import Login from "./pages/Login";
 import Main from "./pages/Main";
 import Signup from "./pages/Signup";
+import Searches from "./pages/Searches";
 
 
 
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/" component={Main} />
           {/* <Route path="/login" component={Login} /> */}
           <Route path="/signup" component={Signup} />
+          <Route path="/searches" component={Searches} />
         </main>
     </Router>
   );

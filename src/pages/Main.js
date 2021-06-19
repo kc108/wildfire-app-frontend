@@ -10,7 +10,7 @@ const Main = (props) => {
                 <Link to="/login"><Button className="button-format" variant="primary" size="sm">Login</Button></Link>
                 <h5>
                 <Link to="/signup"><Button className="button-format" variant="success" size="sm">Create New User</Button></Link></h5>
-                
+                <Link to="/searches"><Button>Searches</Button></Link>
             </div>
         </div>
     )
