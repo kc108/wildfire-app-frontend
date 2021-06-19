@@ -28,12 +28,12 @@
 //             props.history.push("/profile");
 //         })
 //         }
-    
+
 //     return (
-        
+
 //         <div className="signup-container">
 //             <Header />
-//             <UserForm 
+//             <UserForm
 //                 submit={handleSubmit}
 //                 title="Thanks for visiting"
 //                 buttonText="Login"
