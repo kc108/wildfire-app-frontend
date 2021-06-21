@@ -26,7 +26,7 @@ const Searches = (props) => {
   };
 
   return (
-    <div>
+    <div id="mapid">
       <h1>hello</h1>
       <SearchesContainer
         searches={searches}
