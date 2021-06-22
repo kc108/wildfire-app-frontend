@@ -26,12 +26,13 @@ const Searches = (props) => {
   };
 
   return (
-    <div id="mapid">
+    <div>
       <h1>hello</h1>
       <SearchesContainer
         searches={searches}
         handleDeletedSearch={handleDeletedSearch}
       />
+      <div id="windy"></div>
     </div>
   );
 };
