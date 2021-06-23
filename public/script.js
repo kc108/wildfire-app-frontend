@@ -1,6 +1,6 @@
 const options = {
   // Required: API key
-  key: <WHAT GOES HERE THIS IS THE FRONTEND... NOT API></WHAT>, // REPLACE WITH YOUR KEY !!!
+  key: "DNKpvVlFaAtFK7UNrNMO0ajabuOQFvRt", // REPLACE WITH YOUR KEY !!!
   // Put additional console output
   verbose: true,
   // Optional: Initial state of the map

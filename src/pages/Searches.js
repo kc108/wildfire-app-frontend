@@ -32,6 +32,7 @@ const Searches = (props) => {
         searches={searches}
         handleDeletedSearch={handleDeletedSearch}
       />
+
       <div id="windy"></div>
     </div>
   );

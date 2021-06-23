@@ -7,8 +7,13 @@
   pointer-events: none;
 }
 
-#mapid {
-  height: 180px;
+.leaflet-container {
+  width: 80%;
+  height: 80vh;
+}
+
+#windy {
+  height: 800px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
