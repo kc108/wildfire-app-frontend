@@ -26,14 +26,19 @@ const SearchCard = ({ city, id, handleDeletedSearch }) => {
       },
     };
     fetch(`http://localhost:3000/searches/${id}`, {
-      method: "patch",
+      method: "put",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify(data),
-    });
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        setToggleEditForm(!toggleEditForm);
+        setSearchCity(json.search.city);
+      });
   };
 
   const handleChange = (event) => {
@@ -54,7 +59,7 @@ const SearchCard = ({ city, id, handleDeletedSearch }) => {
           <input type="submit" value="save" />
         </form>
       )}
-      {!toggleEditForm && <h2>{city}</h2>}
+      {!toggleEditForm && <h2>{searchCity}</h2>}
 
       <button onClick={handleDelete}>Delete</button>
       <button onClick={handleEdit}>Edit</button>

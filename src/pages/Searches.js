@@ -2,8 +2,40 @@ import React from "react";
 import { useEffect, useState } from "react";
 import SearchesContainer from "../components/SearchesContainer";
 
+// import { OpenStreetMapProvider } from "leaflet-geosearch";
+
 const Searches = (props) => {
   const [searches, setSearches] = useState([]);
+
+  // state for searchForm
+  const [searchForm, setSearchForm] = useState(false);
+
+  const handleClick = () => {
+    setSearchForm(true);
+  };
+
+  const handleCreate = (event) => {
+    event.preventDefault();
+    const data = {
+      search: {
+        city: event.target.querySelector("#city").value,
+      },
+    };
+    fetch("http://localhost:3000/searches", {
+      method: "post",
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        setSearches([...searches, json.search]);
+        setSearchForm(false);
+      });
+  };
 
   useEffect(() => {
     fetch("http://localhost:3000/searches", {
@@ -27,13 +59,19 @@ const Searches = (props) => {
 
   return (
     <div>
-      <h1>hello</h1>
+      <h1>Wind Event</h1>
+      <div id="windy"></div>
       <SearchesContainer
         searches={searches}
         handleDeletedSearch={handleDeletedSearch}
       />
-
-      <div id="windy"></div>
+      <button onClick={handleClick}>Search Location</button>
+      {searchForm && (
+        <form onSubmit={handleCreate}>
+          <input type="text" id="city" name="city" />
+          <input type="submit" value="Save Location" />
+        </form>
+      )}
     </div>
   );
 };

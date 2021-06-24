@@ -1,45 +1,44 @@
-// import React, { useState } from 'react';
-// import { Link } from "react-router-dom";
-// import UserForm from "../components/UserForm";
-// import Header from "../components/Header";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+// IMPORT COMPONENTS
+import UserForm from "../components/UserForm";
+// import Header from "../components/Header"
 
-// // IMPORT FORM FROM BOOTSTRAP
-// import Form from "react-bootstrap/Form";
+const Login = (props) => {
+  const URL = "http://localhost:3000/sessions";
 
-// const Login = (props) => {
-//     const [username, setUsername] = useState("");
-//     const [password, setPassword] = useState("");
+  const handleSubmit = (password, username) => {
+    const data = {
+      user: {
+        username: username,
+        password: password,
+      },
+    };
 
-//     const URL = "https://job-search-binder.herokuapp.com/user"
+    fetch(URL, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        // "token" storing token - can call it anything
+        localStorage.setItem("token", json.jwt_token);
+        // props.history.push("/searches");
+        window.location = "/searches";
+      });
+  };
 
-// const handleSubmit = (password, username) => {
+  return (
+    <div>
+      <UserForm submit={handleSubmit} title="Login" buttonText="Login" />
+      <p style={{ textAlign: "center" }}>
+        Not a Member? <Link to="/signup">Signup here</Link>
+      </p>
+    </div>
+  );
+};
 
-//     console.log("hello")
-
-//     fetch(URL, {
-//         method: "post",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({username, password}),
-//                     })
-//         .then((res) => {
-//             alert("User is signed in")
-//             props.history.push("/profile");
-//         })
-//         }
-
-//     return (
-
-//         <div className="signup-container">
-//             <Header />
-//             <UserForm
-//                 submit={handleSubmit}
-//                 title="Thanks for visiting"
-//                 buttonText="Login"
-//             />
-//         </div>
-//     )
-// }
-
-// export default Login;
+export default Login;

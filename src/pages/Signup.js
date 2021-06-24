@@ -29,6 +29,8 @@ const Signup = (props) => {
       .then((json) => {
         // "token" storing token - can call it anything
         localStorage.setItem("token", json.jwt_token);
+        // props.history.push("/searches");
+        window.location = "/searches";
       });
   };
 
