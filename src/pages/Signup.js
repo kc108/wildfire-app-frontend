@@ -8,7 +8,7 @@ const Signup = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const URL = "http://localhost:3000/users";
+  const URL = "https://wildfire-api.herokuapp.com/users";
 
   const handleSubmit = (password, username) => {
     const data = {

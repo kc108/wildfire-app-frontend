@@ -21,7 +21,7 @@ const Searches = (props) => {
         city: event.target.querySelector("#city").value,
       },
     };
-    fetch("http://localhost:3000/searches", {
+    fetch("https://wildfire-api.herokuapp.com/searches", {
       method: "post",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -38,7 +38,7 @@ const Searches = (props) => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/searches", {
+    fetch("https://wildfire-api.herokuapp.com/searches", {
       method: "get",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,

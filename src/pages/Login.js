@@ -5,7 +5,7 @@ import UserForm from "../components/UserForm";
 // import Header from "../components/Header"
 
 const Login = (props) => {
-  const URL = "http://localhost:3000/sessions";
+  const URL = "https://wildfire-api.herokuapp.com/sessions";
 
   const handleSubmit = (password, username) => {
     const data = {

@@ -6,7 +6,7 @@ const SearchCard = ({ city, id, handleDeletedSearch }) => {
 
   const handleDelete = () => {
     handleDeletedSearch(id);
-    fetch(`http://localhost:3000/searches/${id}`, {
+    fetch(`https://wildfire-api.herokuapp.com/searches/${id}`, {
       method: "delete",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -25,7 +25,7 @@ const SearchCard = ({ city, id, handleDeletedSearch }) => {
         city: event.target.querySelector("#city").value,
       },
     };
-    fetch(`http://localhost:3000/searches/${id}`, {
+    fetch(`https://wildfire-api.herokuapp.com/searches/${id}`, {
       method: "put",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
