@@ -12,11 +12,11 @@ function App() {
   return (
     <Router className="App">
       <main>
-        {/* <Route exact path="/" component={Main} /> */}
+        <Route exact path="/" component={Main} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        {/* <Route path="/searches" component={Searches} /> */}
-        <Route exact path="/" component={Searches} />
+        <Route path="/searches" component={Searches} />
+        {/* <Route exact path="/" component={Searches} /> */}
       </main>
     </Router>
   );
