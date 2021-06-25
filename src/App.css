@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,7 +17,7 @@
 }
 
 #windy {
-  height: 800px;
+  height: 550px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -37,6 +41,27 @@
   color: #61dafb;
 }
 
+/* MAIN PAGE */
+.main-contents {
+  text-align: center;
+}
+
+/* SEARCHES */
+#app-title {
+  text-align: center;
+  margin: auto;
+}
+
+/* LOGIN */
+.login-text {
+  font-size: 15px;
+}
+
+/* USERFORM */
+.userform-center {
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -44,4 +69,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  width: 75%;
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  width: 50%;
 }

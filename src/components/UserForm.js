@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, Route } from "react-router-dom";
 import Main from "../pages/Main";
-// import styles from "./UserForm.module.css";
+//import styles from "./UserForm.module.css";
 // IMPORT REACT-BOOTSTRAP BUTTON
 import Button from "react-bootstrap/Button";
 
@@ -15,48 +15,50 @@ const UserForm = ({ title, buttonText, submit }) => {
 
   return (
     <div>
-      <Form>
-        <h5 style={{ paddingTop: "9px" }}>{title}</h5>
+      <div className="userform-center">
+        <Form>
+          <h5 style={{ paddingTop: "9px" }}>Wind Event</h5>
 
-        <input
-          className="input-fields"
-          type="text"
-          value={username}
-          placeholder="Username"
-          onChange={(event) => setUsername(event.target.value)}
-        />
-        <input
-          className="input-fields"
-          type="password"
-          value={password}
-          placeholder="Password"
-          onChange={(event) => setPassword(event.target.value)}
-        />
-        <br />
-        <Button
-          className="margin-userform"
-          variant="primary"
-          size="sm"
-          onClick={(e) => {
-            e.preventDefault();
-            submit(password, username);
-          }}
-        >
-          {buttonText}
-        </Button>
+          <input
+            className="input-fields"
+            type="text"
+            value={username}
+            placeholder="Username"
+            onChange={(event) => setUsername(event.target.value)}
+          />
+          <input
+            className="input-fields"
+            type="password"
+            value={password}
+            placeholder="Password"
+            onChange={(event) => setPassword(event.target.value)}
+          />
+          <br />
+          <Button
+            className="margin-userform"
+            variant="primary"
+            size="sm"
+            onClick={(e) => {
+              e.preventDefault();
+              submit(password, username);
+            }}
+          >
+            {buttonText}
+          </Button>
 
-        {signupPrompt && (
-          <div>
-            <h4 style={{ color: "red" }}>Invalid Login</h4>
-            <p>
-              Need to sign up?{" "}
-              <Link to="/signup">
-                <Button variant="primary">Signup here</Button>
-              </Link>
-            </p>
-          </div>
-        )}
-      </Form>
+          {signupPrompt && (
+            <div>
+              <h4 style={{ color: "red" }}>Invalid Login</h4>
+              <p>
+                Need to sign up?{" "}
+                <Link to="/signup">
+                  <Button variant="primary">Signup here</Button>
+                </Link>
+              </p>
+            </div>
+          )}
+        </Form>
+      </div>
     </div>
   );
 };
