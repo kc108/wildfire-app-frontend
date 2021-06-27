@@ -5,6 +5,8 @@ import "./index.css";
 // import "./styles.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import "bulma";
 
 ReactDOM.render(
   <React.StrictMode>
