@@ -64,6 +64,7 @@ const Searches = (props) => {
         searches={searches}
         handleDeletedSearch={handleDeletedSearch}
       />
+
       <div className="search-btn">
         <button
           className=" button is-block is-small is-link is-hovered margin-userform login-signup-btn"
@@ -75,8 +76,17 @@ const Searches = (props) => {
       {searchForm && (
         <div className="form-search-input">
           <form onSubmit={handleCreate}>
-            <input type="text" id="city" name="city" />
-            <input type="submit" value="Save Location" />
+            <input
+              type="text"
+              className="searches-placeholder"
+              id="city"
+              name="city"
+            />
+            <input
+              type="submit"
+              className=" button is-block is-small is-link is-hovered margin-userform login-signup-btn"
+              value="Save Location"
+            />
           </form>
         </div>
       )}
