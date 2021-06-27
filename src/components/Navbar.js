@@ -4,47 +4,6 @@ export default function Navbar() {
   const [isActive, setisActive] = React.useState(false);
 
   return (
-    // <nav className="navbar" role="navigation" aria-label="dropdown navigation">
-    //   <div className="navbar-brand">
-    //     <a href="/searches" className="navbar-item">
-    //       <img
-    //         src="https://png.pngitem.com/pimgs/s/102-1024189_tree-in-the-wind-blowing-tree-blowing-in.png"
-    //         alt="Logo"
-    //         width="108"
-    //         height="60"
-    //       />
-    //     </a>
-
-    //     <a
-    //       onClick={() => {
-    //         setisActive(!isActive);
-    //       }}
-    //       role="button"
-    //       className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
-    //       aria-label="menu"
-    //       aria-expanded="false"
-    //       data-target="navbarBasicExample"
-    //     >
-    //       <span aria-hidden="true"></span>
-    //       <span aria-hidden="true"></span>
-    //       <span aria-hidden="true"></span>
-    //     </a>
-    //   </div>
-
-    //   <div
-    //     id="navbarBasicExample"
-    //     className={`navbar-menu ${isActive ? "is-active" : ""}`}
-    //   >
-    //     <div className="navbar-end">
-    //       <div className="navbar-item">
-    //         <a href="https://www2.purpleair.com/" className="navbar-item">
-    //           Fire Resources
-    //         </a>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </nav>
-
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="/searches">

@@ -59,18 +59,26 @@ const Searches = (props) => {
 
   return (
     <div>
-      <h1>Wind Event</h1>
       <div id="windy"></div>
       <SearchesContainer
         searches={searches}
         handleDeletedSearch={handleDeletedSearch}
       />
-      <button onClick={handleClick}>Search Location</button>
+      <div className="search-btn">
+        <button
+          className=" button is-block is-small is-link is-hovered margin-userform login-signup-btn"
+          onClick={handleClick}
+        >
+          Search Location
+        </button>
+      </div>
       {searchForm && (
-        <form onSubmit={handleCreate}>
-          <input type="text" id="city" name="city" />
-          <input type="submit" value="Save Location" />
-        </form>
+        <div className="form-search-input">
+          <form onSubmit={handleCreate}>
+            <input type="text" id="city" name="city" />
+            <input type="submit" value="Save Location" />
+          </form>
+        </div>
       )}
     </div>
   );

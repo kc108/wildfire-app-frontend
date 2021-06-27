@@ -85,6 +85,12 @@
   position: relative;
 }
 
+.login-box,
+.signup-box {
+  position: relative;
+  margin-top: 75px;
+}
+
 .login-signup-btn {
   margin-top: 15px;
   margin-bottom: 7px;
@@ -95,6 +101,15 @@
 .center-login-img {
   margin: auto;
   justify-content: center;
+}
+
+.login-text {
+  color: rgb(10, 75, 10);
+}
+
+.login-link {
+  text-decoration: underline;
+  color: rgb(10, 75, 10);
 }
 
 .login-title {
@@ -148,6 +163,19 @@
   justify-content: left;
 }
 
+/* MAP-CONTAINER */
+#map-container {
+  position: absolute;
+  height: 50%;
+}
+
+/* SEARCHES */
+.search-btn,
+.form-search-input {
+  width: auto;
+  border-radius: 5px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -166,3 +194,8 @@
 @media only screen and (min-width: 992px) {
   width: 50%;
 }
+/* @media only screen and (max-width: 600px) {
+  body {
+    
+  }
+} */
