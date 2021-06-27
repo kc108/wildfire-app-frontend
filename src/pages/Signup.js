@@ -35,15 +35,20 @@ const Signup = (props) => {
   };
 
   return (
-    <div>
-      <UserForm
-        submit={handleSubmit}
-        title="Signup. It's quick and easy"
-        buttonText="Signup"
-      />
-      <p style={{ textAlign: "center" }}>
-        Already a Member? <Link to="/login">Login here</Link>
-      </p>
+    <div className="hero is-fullheight main-comps">
+      <div className="box signup-box">
+        <UserForm
+          submit={handleSubmit}
+          title="Signup. It's quick and easy"
+          buttonText="Signup"
+        />
+        <p style={{ textAlign: "center" }}>
+          <div className="font-style-userform">
+            Already a Member?
+            <Link to="/login"> Login here</Link>
+          </div>
+        </p>
+      </div>
     </div>
   );
 };
