@@ -9,10 +9,12 @@ I created this application because I wanted to have an application that shows Fi
 ## Frontend:
 
 - React
+- JSX
 - JavaScript
 - Bulma
 - CSS
 - HTML
+- Third-Party API provided by WindyAPI
 
 ---
 
