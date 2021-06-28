@@ -46,23 +46,25 @@ const SearchCard = ({ city, id, handleDeletedSearch }) => {
   };
 
   return (
-    <div>
-      {toggleEditForm && (
-        <form onSubmit={handleUpdate}>
-          <input
-            type="text"
-            id="city"
-            value={searchCity}
-            name="city"
-            onChange={handleChange}
-          />
-          <input type="submit" value="save" />
-        </form>
-      )}
-      {!toggleEditForm && <h2>{searchCity}</h2>}
+    <div className="container-searchcard">
+      <div className="box">
+        {toggleEditForm && (
+          <form onSubmit={handleUpdate}>
+            <input
+              type="text"
+              id="city"
+              value={searchCity}
+              name="city"
+              onChange={handleChange}
+            />
+            <input type="submit" value="save" />
+          </form>
+        )}
+        {!toggleEditForm && <h2>{searchCity}</h2>}
 
-      <button onClick={handleDelete}>Delete</button>
-      <button onClick={handleEdit}>Edit</button>
+        <button onClick={handleDelete}>Delete</button>
+        <button onClick={handleEdit}>Edit</button>
+      </div>
     </div>
   );
 };

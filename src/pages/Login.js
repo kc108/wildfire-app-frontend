@@ -37,7 +37,10 @@ const Login = (props) => {
         <div className="box login-box">
           <UserForm submit={handleSubmit} title="Login" buttonText="Login" />
           <p className="login-text" style={{ textAlign: "center" }}>
-            Not a Member? <Link to="/signup">Signup here</Link>
+            Not a Member?{" "}
+            <Link to="/signup">
+              <div className="signup-here">Signup here</div>
+            </Link>
           </p>
         </div>
       </div>

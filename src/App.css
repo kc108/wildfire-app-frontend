@@ -94,7 +94,7 @@
 .login-signup-btn {
   margin-top: 15px;
   margin-bottom: 7px;
-  width: 60%;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -107,7 +107,8 @@
   color: rgb(10, 75, 10);
 }
 
-.login-link {
+.login-link,
+.signup-here {
   text-decoration: underline;
   color: rgb(10, 75, 10);
 }
@@ -165,8 +166,7 @@
 
 /* MAP-CONTAINER */
 #map-container {
-  position: absolute;
-  height: 50%;
+  height: 100%;
 }
 
 /* SEARCHES */
@@ -174,10 +174,17 @@
 .form-search-input {
   width: auto;
   border-radius: 5px;
+  text-align: center;
 }
 
 .searches-placeholder {
-  margin-left: 800px;
+  margin: auto;
+  align-items: center;
+  width: 100%;
+}
+
+.form-search-input {
+  width: 100%;
 }
 
 @keyframes App-logo-spin {
@@ -189,9 +196,18 @@
   }
 }
 
+.search-container {
+  margin: auto;
+  width: 30%;
+}
+
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
-  width: 75%;
+  .signup-box,
+  .login-box {
+    width: 40%;
+    height: 70%;
+  }
 }
 
 /* Medium Devices, Desktops */
