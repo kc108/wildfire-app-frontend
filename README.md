@@ -1,3 +1,60 @@
+# Overview:
+
+An application to display the wind conditions that contribute to wind events that elevate fire risk.
+
+I created this application because I wanted to have an application that shows Fire Resources in one spot. As when preparing to evacuate (or preparing) I always struggled to remember all of the resources frequently used from the previous years.
+
+# Technologies Used
+
+## Frontend:
+
+- React
+- JavaScript
+- Bulma
+- CSS
+- HTML
+
+---
+
+# Features
+
+- User Authentication (JWT_tokens)
+- WindyAPI (Third-party API)
+
+---
+
+## React Components Used:
+
+### Components:
+
+- Navbar.js
+- SearchCard.js
+- SearchesContainer.js
+- UserForm.js
+
+## Pages:
+
+- Login.js
+- Main.js
+- Searches.js
+- Signup.js
+
+---
+
+## Lessons Learned:
+
+- Intended to build an application that displays the wind conditions from the WindyAPI and overlay AQI (Air Quality Index) measurements based on a specified city. This was not able to be successfully executed because React Leaflet is no longer supported through the WindyAPI.
+
+- I will continue working on this project to include an AQI per city basis. This will be possible by way of a third-party app company I spoke to that will be providing me with a third-party API key.
+
+---
+
+### Author:
+
+Kim Carpico
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
