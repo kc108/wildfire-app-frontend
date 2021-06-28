@@ -57,7 +57,7 @@ const SearchCard = ({ city, id, handleDeletedSearch }) => {
               name="city"
               onChange={handleChange}
             />
-            <input type="submit" value="save" />
+            <input type="submit" className="button-format" value="save" />
           </form>
         )}
         {!toggleEditForm && <h1>{searchCity}</h1>}
