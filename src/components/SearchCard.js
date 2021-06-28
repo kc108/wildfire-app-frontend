@@ -60,10 +60,14 @@ const SearchCard = ({ city, id, handleDeletedSearch }) => {
             <input type="submit" value="save" />
           </form>
         )}
-        {!toggleEditForm && <h2>{searchCity}</h2>}
+        {!toggleEditForm && <h1>{searchCity}</h1>}
 
-        <button onClick={handleDelete}>Delete</button>
-        <button onClick={handleEdit}>Edit</button>
+        <button className="button-format" onClick={handleDelete}>
+          Delete
+        </button>
+        <button className="button-format" onClick={handleEdit}>
+          Edit
+        </button>
       </div>
     </div>
   );

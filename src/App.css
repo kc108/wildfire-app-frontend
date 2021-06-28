@@ -177,6 +177,14 @@
   text-align: center;
 }
 
+.btn-delete {
+  align-content: left;
+}
+
+.delete-btn {
+  text-align: left;
+}
+
 .searches-placeholder {
   margin: auto;
   align-items: center;
@@ -185,6 +193,13 @@
 
 .form-search-input {
   width: 100%;
+}
+
+.button-format {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(44, 160, 54);
+  border-radius: 5px;
 }
 
 @keyframes App-logo-spin {
